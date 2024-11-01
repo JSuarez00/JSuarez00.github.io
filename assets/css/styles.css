@@ -275,3 +275,12 @@ body {
     transform: translateX(0);
   }
 }
+
+.video  {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0.5rem ;
+  }
+}

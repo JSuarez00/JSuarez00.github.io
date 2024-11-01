@@ -1,6 +1,6 @@
 // Función para actualizar el temporizador
 function updateTimer() {
-    const end = new Date();
+    const end = new Date( '2024-11-1');
     end.setHours(end.getHours() + 13);
 
     const now = new Date();
