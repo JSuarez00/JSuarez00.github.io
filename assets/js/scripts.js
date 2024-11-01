@@ -1,6 +1,6 @@
 // Función para actualizar el temporizador
 function updateTimer() {
-    const end = new Date( '2024-11-1');
+    const end = new Date(date.now);
     end.setHours(end.getHours() + 13);
 
     const now = new Date();
@@ -75,3 +75,60 @@ document.querySelectorAll(".faq-question").forEach((question) => {
         item.classList.toggle("active");
     });
 });
+
+// Seleccionamos el formulario y los campos de entrada
+const form = document.getElementById('data-collection');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
+const responseDiv = document.getElementById('userdata-response');
+
+// Agregamos un evento de submit al formulario
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Evitamos que el formulario se envíe a un servidor
+
+    // Recopilamos los datos del usuario
+    const userData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        phone: phoneInput.value
+    };
+
+    // Guardamos los datos en el almacenamiento del navegador (localStorage)
+    localStorage.setItem('userData', JSON.stringify(userData));
+
+    // Mostramos un mensaje de confirmación
+    responseDiv.innerHTML = 'Datos guardados con éxito!';
+
+    // Limpiamos los campos de entrada
+    nameInput.value = '';
+    emailInput.value = '';
+    phoneInput.value = '';
+});
+function saveData(email, userName, userDetails) {
+    const sheetName = "User Data";
+    const scriptProperties = PropertiesService.getUserProperties();
+    const spreadsheetId = scriptProperties.getProperty("spreadsheetId");
+    const sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName(sheetName);
+
+    const data = [[email, userName, userDetails]];
+    sheet.getRange(sheet.getLastRow() + 1, 1, 1, 3).setValues(data);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("data-collection");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const userName = document.getElementById("userName").value;
+        const userDetails = document.getElementById("userDetails").value;
+
+        saveData(email, userName, userDetails);
+    });
+});
+
+function doGet() {
+    const scriptProperties = PropertiesService.getUserProperties();
+    scriptProperties.setProperty("spreadsheetId", "12Vuvfw_v4olpEp6gwpUgheclsIeATU2TwB75m-vOSw8");
+    // ...
+}
