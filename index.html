@@ -5,265 +5,8 @@
 <meta name="description" content="Domina el arte de la decoración con globos y construye un negocio exitoso. Certificación profesional, +102 clases HD y comunidad exclusiva. ¡Garantía de satisfacción!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --primary: #ff6b6b;
-  --secondary: #4ecdc4;
-  --accent: #ffd93d;
-  --dark: #2d3436;
-  --light: #f8f9fa;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: var(--dark);
-}
-
-.hero {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff20' d='M42.5,-72.3C54.9,-64.7,64.3,-51.5,70.9,-37.1C77.5,-22.7,81.2,-7,78.2,7.2C75.2,21.4,65.4,34.2,54.7,44.3C44,54.4,32.4,61.8,19.2,66.1C6,70.4,-8.9,71.5,-22.9,68C-36.9,64.4,-49.1,56.2,-58.6,45.1C-68.1,34,-75,20,-76.8,4.9C-78.6,-10.2,-75.3,-26.3,-67.2,-39.2C-59.1,-52.1,-46.2,-61.7,-32.8,-68.6C-19.4,-75.5,-5.5,-79.7,9.2,-78.8C23.8,-77.9,48.7,-71.8,42.5,-72.3Z' transform='translate(100 100)'/%3E%3C/svg%3E") no-repeat center center;
-  opacity: 0.1;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.timer {
-  background: rgba(255,255,255,0.15);
-  padding: 2rem;
-  border-radius: 16px;
-  margin: 2rem auto;
-  max-width: 500px;
-  backdrop-filter: blur(5px);
-}
-
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background: var(--light);
-}
-
-.benefit-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.benefit-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-}
-
-.cta-button {
-  background: var(--accent);
-  color: var(--dark);
-  text-decoration: none;
-  padding: 1.5rem 3rem;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: inline-block;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.cta-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-}
-
-.features {
-  padding: 6rem 2rem;
-  background: white;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
-}
-
-.floating-balloon {
-  animation: float 6s ease-in-out infinite;
-}
-
-.price-tag {
-  background: var(--accent);
-  color: var(--dark);
-  padding: 0.5rem 2rem;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.5rem;
-  display: inline-block;
-  margin: 2rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.price-tag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-  animation: shine 2s infinite;
-}
-
-@keyframes shine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.social-proof {
-  background: linear-gradient(135deg, #ffffff, var(--light));
-  padding: 4rem 2rem;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-}
-
-.student-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.student-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-}
-
-.trust-badges {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-.faq-section {
-  padding: 4rem 2rem;
-  background: var(--light);
-}
-
-.faq-grid {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
-
-.faq-question {
-  padding: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
-
-.faq-answer {
-  padding: 0 1.5rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.faq-item.active .faq-answer {
-  padding: 1.5rem;
-  max-height: 500px;
-}
-
-.value-proposition {
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.floating-notice {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000;
-  display: none;
-  animation: slideIn 0.5s ease;
-}
-
-@keyframes slideIn {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-</style>
+<link rel="stylesheet" href="./assets/css/styles.css">
+<script src="./assets/js/scripts.js"></script>
 </head>
 <body>
 
@@ -274,7 +17,7 @@ body {
     <h3>¡Oferta especial termina en:</h3>
     <div id="countdown"></div>
   </div>
-  <a href="https://checkout.decoraglobo.com" class="cta-button">¡INSCRÍBETE AHORA!</a>
+  <a href="https://go.hotmart.com/X96199692W?ap=ed4d" class="cta-button">¡INSCRÍBETE AHORA!</a>
 </header>
 
 <main>
@@ -353,9 +96,9 @@ body {
       <h2>Garantía de Satisfacción 7 Días</h2>
       <p style="font-size: 1.2rem; margin-bottom: 2rem;">Si no estás completamente satisfecho con el curso durante los primeros 7 días, te devolvemos el 100% de tu inversión sin hacer preguntas.</p>
       <div class="price-tag">
-        INVERSIÓN: $XXX USD
+        INVERSIÓN: $1500 USD
       </div>
-      <a href="https://checkout.decoraglobo.com" class="cta-button" style="margin-top: 2rem;">¡COMIENZA HOY MISMO!</a>
+      <a href="https://go.hotmart.com/X96199692W?ap=ed4d" class="cta-button" style="margin-top: 2rem;">¡COMIENZA HOY MISMO!</a>
     </div>
   </section>
   
@@ -385,8 +128,8 @@ body {
       </div>
     </div>
     <div class="trust-badges">
-      <img src="badge1.png" alt="Badge 1" />
-      <img src="badge2.png" alt="Badge 2" />
+      <img src="./assets/img/rb_45559.png" alt="Badge 1"  height="64px" width="64px"/>
+      <img src="/./assets/img/1st-place-laurel-badge-8a7412.png" alt="Badge 2"  height="64px" width="64px"/>
     </div>
   </section>
 
@@ -412,69 +155,6 @@ body {
     <p>🔥 ¡3 personas se han inscrito en la última hora!</p>
   </div>
 </main>
-
-<script>
-function updateTimer() {
-  const end = new Date();
-  end.setHours(end.getHours() + 24);
-  
-  const now = new Date();
-  const diff = end - now;
-  
-  const hours = Math.floor(diff / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-  
-  const format = num => num.toString().padStart(2, '0');
-  
-  document.getElementById('countdown').innerHTML = `
-    <div style="display:flex; justify-content:center; gap:1rem; font-size:2rem;">
-      <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-        <span style="font-size:2.5rem; font-weight:bold;">${format(hours)}</span>
-        <br>HORAS
-      </div>
-      <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-        <span style="font-size:2.5rem; font-weight:bold;">${format(minutes)}</span>
-        <br>MINUTOS
-      </div>
-      <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-        <span style="font-size:2.5rem; font-weight:bold;">${format(seconds)}</span>
-        <br>SEGUNDOS
-      </div>
-    </div>
-  `;
-}
-
-setInterval(updateTimer, 1000);
-updateTimer();
-
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const item = question.parentElement;
-    item.classList.toggle('active');
-  });
-});
-
-function showRandomNotification() {
-  const notices = [
-    '🔥 3 personas se han inscrito en la última hora!',
-    '⭐ "El mejor curso que he tomado" - María S.',
-    '💰 Un estudiante reportó sus primeros $1,000 USD'
-  ];
-  
-  const notice = document.getElementById('floatingNotice');
-  notice.innerHTML = `<p>${notices[Math.floor(Math.random() * notices.length)]}</p>`;
-  notice.style.display = 'block';
-  
-  setTimeout(() => {
-    notice.style.display = 'none';
-  }, 5000);
-}
-
-setInterval(() => {
-  if (Math.random() > 0.5) showRandomNotification();
-}, 30000);
-</script>
 
 </body>
 </html>
