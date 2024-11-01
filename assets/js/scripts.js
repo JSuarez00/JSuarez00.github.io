@@ -12,26 +12,26 @@ function updateTimer() {
     const format = (num) => num.toString().padStart(2, "0");
 
     document.getElementById("countdown").innerHTML = `
-      <div style="display:flex; justify-content:center; gap:1rem; font-size:2rem;">
+    <div style="display:flex; justify-content:center; gap:1rem; font-size:2rem;">
         <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-          <span style="font-size:2.5rem; font-weight:bold;">${format(
+        <span style="font-size:2.5rem; font-weight:bold;">${format(
         hours
     )}</span>
-          <br>HORAS
+        <br>HORAS
         </div>
         <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-          <span style="font-size:2.5rem; font-weight:bold;">${format(
+        <span style="font-size:2.5rem; font-weight:bold;">${format(
         minutes
     )}</span>
-          <br>MINUTOS
+        <br>MINUTOS
         </div>
         <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-          <span style="font-size:2.5rem; font-weight:bold;">${format(
+        <span style="font-size:2.5rem; font-weight:bold;">${format(
         seconds
     )}</span>
-          <br>SEGUNDOS
+        <br>SEGUNDOS
         </div>
-      </div>
+    </div>
     `;
 }
 
