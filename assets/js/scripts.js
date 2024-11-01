@@ -14,21 +14,15 @@ function updateTimer() {
     document.getElementById("countdown").innerHTML = `
     <div style="display:flex; justify-content:center; gap:1rem; font-size:2rem;">
         <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-        <span style="font-size:2.5rem; font-weight:bold;">${format(
-        hours
-    )}</span>
+        <span style="font-size:2.5rem; font-weight:bold;">${format(hours)}</span>
         <br>HORAS
         </div>
         <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-        <span style="font-size:2.5rem; font-weight:bold;">${format(
-        minutes
-    )}</span>
+        <span style="font-size:2.5rem; font-weight:bold;">${format(minutes)}</span>
         <br>MINUTOS
         </div>
         <div style="background:rgba(0,0,0,0.2); padding:1rem; border-radius:8px;">
-        <span style="font-size:2.5rem; font-weight:bold;">${format(
-        seconds
-    )}</span>
+        <span style="font-size:2.5rem; font-weight:bold;">${format(seconds)}</span>
         <br>SEGUNDOS
         </div>
     </div>
@@ -58,8 +52,7 @@ function showRandomNotification() {
     ];
 
     const notice = document.getElementById("floatingNotice");
-    notice.innerHTML = `<p>${notices[Math.floor(Math.random() * notices.length)]
-        }</p>`;
+    notice.innerHTML = `<p>${notices[Math.floor(Math.random() * notices.length)]}</p>`;
     notice.style.display = "block";
 
     setTimeout(() => {
@@ -70,5 +63,3 @@ function showRandomNotification() {
 setInterval(() => {
     if (Math.random() > 0.5) showRandomNotification();
 }, 30000);
-
-
