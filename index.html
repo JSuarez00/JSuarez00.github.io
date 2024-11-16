@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <script src="./assets/js/scripts.js"></script>
+
 </head>
 <!-- Google Tag Manager -->
 <script>(function (w, d, s, l, i) {
@@ -32,12 +32,13 @@
       <h3>¡Oferta especial termina en:</h3>
       <div id="countdown"></div>
     </div>
-    <div><a href="https://go.hotmart.com/X96199692W?ap=ed4d" class="cta-button" style="margin-top: 2rem;">¡INSCRÍBETE
-      AHORA!</a></div> 
-    
   </header>
 
   <main>
+    <div>
+      <a href="https://go.hotmart.com/X96199692W?ap=ed4d" class="cta-button ahora ">¡INSCRÍBETE
+        AHORA!</a>
+    </div>
     <div class="value-proposition">
       <h2>¿Te Imaginas Ganando $2,000+ USD Mensuales Haciendo lo que Amas?</h2>
       <p style="font-size: 1.2rem; max-width: 800px; margin: 2rem auto;">
@@ -127,26 +128,47 @@
       </div>
     </section>
 
+    <!-- Formulario mejorado -->
     <section class="data-collection">
       <h2>Ingresa tus datos</h2>
-      <form id="userdata-form">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="phone">Teléfono:</label>
-        <input type="tel" id="phone" name="phone"><br><br>
+      <form id="userdata-form" novalidate>
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required autocomplete="name" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" autocomplete="tel">
+        </div>
+
         <button type="submit">Enviar</button>
       </form>
-      <div id="userdata-response"></div>
+      <div id="userdata-response" aria-live="polite"></div>
     </section>
 
     <section class="social-proof">
       <h2 style="text-align: center; margin-bottom: 3rem;">Historias de Éxito</h2>
-      <div class="Video">
-        <video src='./assets/videos/TESTIMONIO 2.mp4' autoplay controls muted preload="auto"
-      </video>
-      </div>
+       <!-- Corrección de la sección de video -->
+       <section class="social-proof">
+        <h2>Historias de Éxito</h2>
+        <div class="video-container">
+            <video 
+                src="./assets/videos/TESTIMONIO 2.mp4"
+                controls
+                muted
+                preload="metadata"
+                poster="./assets/img/video-poster.jpg"
+                aria-label="Testimonios de estudiantes">
+                <track kind="captions" src="./assets/captions/testimonios.vtt" srclang="es" label="Español">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
       <div class="testimonial-grid">
         <div class="testimonial-card">
           <p>"Este curso cambió mi vida, ahora tengo mi propio negocio de decoración!"</p>
@@ -199,7 +221,11 @@
       <p>🔥 ¡3 personas se han inscrito en la última hora!</p>
     </div>
   </main>
-
+  <footer role="contentinfo" class="footer">
+    <p>&copy; 2024 Impacto Digital. Todos los derechos reservados.</p>
+  </footer>
+  <!-- Scripts al final para mejor rendimiento -->
+  <script src="./assets/js/scripts.js"></script>
 </body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ5K67ZD" height="0" width="0"
